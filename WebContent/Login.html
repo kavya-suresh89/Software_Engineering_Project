@@ -1,0 +1,110 @@
+<html> 
+	<head> 
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+		<title>ITUBuzz</title> 
+	</head> 
+	<body> 
+		<h1>ITUBuzz<br/></h1>
+		<h2>The ITU Social Network
+			<form action="LoginCheck.jsp" method="post"> 
+			Username:<input type="text" name="username"> 
+			Password:<input type="password" name="password"> 
+			<input type="submit" value="Log In">
+			</form>
+		</h2>
+		<hr>
+		<h2>Sign Up</h2>
+		<input type="radio" id="radio1" name="usertypes" value="student" checked onclick="displayForm(this)"> Student
+  		<input type="radio" id="radio2" name="usertypes" value="alumni" onclick="displayForm(this)"> Alumni
+  		<input type="radio" id="radio3" name="usertypes" value="faculty" onclick="displayForm(this)"> Faculty/Department <br/><br/>
+  		
+  		<form id="registerstudent">
+  		 		First Name:<input type="text" name="firstname"><br/>
+		  		Last Name:<input type="text" name="lastname"><br/>
+		  		Username:<input type="text" name="username"><br/>
+		  		Password:<input type="password" name="password"><br/>
+		  		Confirm Password:<input type="password" name="password"><br/>
+		  		Email ID:<input type="email"	name="emailid"><br/>
+				Date of Birth:<input type="datetime" name="dob"><br/>
+				Department:<input type="text" name="department"><br/>	
+				Current Semester:
+				<select>
+				<option value="select">Select</option>
+				<option value="1stSemester">1st Semester</option>
+				<option value="2stSemester">2st Semester</option>
+				<option value="3stSemester">3st Semester</option>
+				<option value="4stSemester">4st Semester</option>
+				</select><br/>
+				<input type="radio" name="gender" value="male"> Male
+				<input type="radio" name="gender" value="female"> Female <br/><br/>
+				<input type="submit" value="Sign Up">
+		</form>
+			
+  		<form style="display:none" id="registeralumni">
+  			First Name:<input type="text" name="firstname"><br/>
+	  		Last Name:<input type="text" name="lastname"><br/>
+	  		Username:<input type="text" name="username"><br/>
+	  		Password:<input type="password" name="password"><br/>
+	  		Confirm Password:<input type="password" name="password"><br/>
+	  		Email ID:<input type="email"	name="emailid"><br/>
+			Date of Birth:<input type="datetime" name="dob"><br/>
+			Department:
+			<select>
+			<option value="select">Select</option>
+			<option value="1stSemester">MSSE</option>
+			<option value="2stSemester">MSEE</option>
+			<option value="3stSemester">MBAF</option>
+			<option value="4stSemester">MBAA</option>
+			</select><br/>		
+			<input type="radio" name="gender" value="male"> Male
+			<input type="radio" name="gender" value="female"> Female <br/><br/>
+			<input type="submit" value="Sign Up">
+  		</form>
+  		<form style="display:none" id="registerfaculty">
+  			First Name:<input type="text" name="firstname"><br/>
+	  		Last Name:<input type="text" name="lastname"><br/>
+	  		Username:<input type="text" name="username"><br/>
+	  		Password:<input type="password" name="password"><br/>
+	  		Confirm Password:<input type="password" name="password"><br/>
+	  		Email ID:<input type="email"	name="emailid"><br/>
+			Date of Birth:<input type="datetime" name="dob"><br/>
+			Department:
+			<select>
+			<option value="select">Select</option>
+			<option value="1stSemester">MSSE</option>
+			<option value="2stSemester">MSEE</option>
+			<option value="3stSemester">MBAF</option>
+			<option value="4stSemester">MBAA</option>
+			</select><br/>		
+			Role:
+			<select>
+			<option value="select">Select</option>
+			<option value="professor">Professor</option>
+			<option value="iso">ISO Co-ordinator</option>
+			<option value="admission">Admission Councellor</option>
+			</select><br/>
+			<input type="radio" name="gender" value="male"> Male
+			<input type="radio" name="gender" value="female"> Female <br/><br/>
+			<input type="submit" value="Sign Up">
+  		</form>
+  		
+  		<script type="text/javascript">
+  		function displayForm(r) {
+  			if (r.value == 'student'){
+  				document.getElementById("registerstudent").style.display = 'inline';
+  				document.getElementById("registeralumni").style.display = 'none';
+  				document.getElementById("registerfaculty").style.display = 'none';
+  			}
+  			else if (r.value == 'alumni'){
+  				document.getElementById("registeralumni").style.display = 'inline';
+  				document.getElementById("registerstudent").style.display = 'none';
+  				document.getElementById("registerfaculty").style.display = 'none';
+  			}else if (r.value == 'faculty'){
+  				document.getElementById("registeralumni").style.display = 'none';
+  				document.getElementById("registerstudent").style.display = 'none';
+  				document.getElementById("registerfaculty").style.display = 'inline';
+  			}
+  		}
+  		</script>	
+  	</body> 
+</html>

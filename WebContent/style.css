@@ -1,0 +1,244 @@
+@charset="ISO-8859-1";
+
+/* Login Page */
+            .loginpage {
+                background: url("test3.png") no-repeat center center fixed; 
+                opacity: 0.9;  
+  				-webkit-background-size: cover;
+  				-moz-background-size: cover;
+  				-o-background-size: cover;
+  				background-size: cover;
+            }
+            
+            .well {
+				background: rgba(255,255,255,0.9);
+				background: -moz-linear-gradient(left, rgba(255,255,255,0.9) 0%, rgba(245,237,245,0.9) 35%, rgba(242,233,242,0.9) 60%, rgba(255,250,255,0.9) 100%);
+				background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,0.9)), color-stop(35%, rgba(245,237,245,0.9)), color-stop(60%, rgba(242,233,242,0.9)), color-stop(100%, rgba(255,250,255,0.9)));
+				background: -webkit-linear-gradient(left, rgba(255,255,255,0.9) 0%, rgba(245,237,245,0.9) 35%, rgba(242,233,242,0.9) 60%, rgba(255,250,255,0.9) 100%);
+				background: -o-linear-gradient(left, rgba(255,255,255,0.9) 0%, rgba(245,237,245,0.9) 35%, rgba(242,233,242,0.9) 60%, rgba(255,250,255,0.9) 100%);
+				background: -ms-linear-gradient(left, rgba(255,255,255,0.9) 0%, rgba(245,237,245,0.9) 35%, rgba(242,233,242,0.9) 60%, rgba(255,250,255,0.9) 100%);
+				background: linear-gradient(to right, rgba(255,255,255,0.9) 0%, rgba(245,237,245,0.9) 35%, rgba(242,233,242,0.9) 60%, rgba(255,250,255,0.9) 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#fffaff', GradientType=1 );
+				border: 3px solid white;
+				border-radius: 10px;
+				margin-top: 60px;
+				width: 500px;
+                float: none;
+                margin-left: auto;
+                margin-right: auto;
+				
+			}
+			
+			h2 {
+				background: transparent; 
+				text-align:center;
+				font-family: Lucida Sans Unicode;
+				font-style: italic;
+				border-radius: 10px;
+				float: none;
+				margin-left: auto;
+				margin-right: auto;
+				padding: 2px 0px 6px 0px;
+				font-family: "Fredericka the Great";
+			
+			}
+			
+			h1 {
+				background: transparent; 
+				color: green;
+				text-align:center;
+				border-radius: 10px;
+				float: none;
+				margin-left: auto;
+				margin-right: auto;
+				font-family: "Fredericka the Great";
+			
+			}
+			
+			h3 {
+			font-family: "Inconsolata";
+			
+			}
+			
+			h6 {
+				background: transparent; 
+				color: green;
+				text-align:center;
+				border-radius: 10px;
+				float: none;
+				margin-left: auto;
+				margin-right: auto;
+				padding: 2px 0px 6px 0px;
+				font-family: "Inconsolata";
+			
+			}
+			
+			.fa-retweet {
+			
+			margin-bottom: 25px;
+			} 
+			
+			.btn-success {
+			margin-left: 40px;
+
+			}
+			
+			select {
+			background: 
+			}
+			
+		 	.form-control {
+			background: white;
+			border: 1px solid #999;
+			}
+			
+			#department_student {
+			
+			width: 450px;
+			color: darkgray;
+			margin-top: 2px;
+			margin-bottom: 10px;
+			}
+			
+			#semester_student {
+			
+			color: darkgray;
+			}
+			
+			#department_alumni {
+			
+			width: 450px;
+			color: darkgray;
+			margin-top: 2px;
+			margin-bottom: 15px;
+			}
+			
+			#month_of_passing {
+			
+			color: darkgray;
+			margint-bottom: 20px;
+			}
+			
+			#year_of_passing {
+			
+			color: darkgray;
+			margin-bottom: 20px;
+			margin-top: 20px;
+			
+			}
+			
+			#department_faculty {
+			
+			color: darkgray;
+			width: 450px;
+			margin-bottom: 30px;
+			padding-bottom: 50px;
+			
+			
+			}
+			
+			#register_form table {
+				width: 400px;
+				padding: 0px 0px 0px 20px;
+			}
+			
+		   	input[type=radio] {
+    			width: 20px;
+    			height: 20px;
+			}
+			
+			.forgot {
+			
+			text-decoration: underline;
+			}
+			
+            .navbar-default {
+                background-color: #006600;
+            }
+            
+            .form-control .input-sm #email {
+                margin-right: 5px;
+            }
+            
+            .form-control .input-sm #pass {
+                margin-right: 5px;
+            }
+            
+            .member {
+            margin-bottom: 30px;
+            
+            }
+            
+            
+            .form-group #student1,
+            #alumni1,
+            #faculty1 {
+                width: 450px;
+                float: none;
+                margin-left: auto;
+                margin-right: auto;
+            }
+/* Login Page */
+
+/* Home Page  */
+ .homepage, .qaforum, .questionpage, .viewprofile {
+	background: url("bg.png") no-repeat center center fixed;   
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.textboxlist { 
+	width: 400px; bgcolor: #a8a69f; 
+}
+.navbar {
+background: #b4ddb4; /* Old browsers */
+background: -moz-linear-gradient(top,  #b4ddb4 0%, #008a00 40%, #008a00 66%, #002400 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #b4ddb4 0%,#008a00 40%,#008a00 66%,#002400 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #b4ddb4 0%,#008a00 40%,#008a00 66%,#002400 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4ddb4', endColorstr='#002400',GradientType=0 ); /* IE6-9 */
+
+}
+
+.add-on .input-group-btn {
+  border-left-width:0;left:-2px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  border-radius: 30px 0px 0px 0px;
+}
+
+.add-on .input-group-btn > .btn {
+  border-left-width:0;left:-2px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  height: 35px;
+  border-radius: 0px 20px 20px 0px;
+}
+
+#nav-element {
+	color: white;
+	font-size: 14px;
+}
+#displayName {
+	color: #33cc33;
+}
+#displayReply {
+	color: black;
+	margin-left: 10px;
+}
+
+#first_name, #middle_name, #last_name, #e_mail_id {
+	border: 0;
+	background: white;
+    box-sizing:border-box;
+    border: 1px solid #ccc;
+    -moz-box-sizing:border-box;
+}
+.btn .btn-success #edit {
+	display:inline-block;
+    margin: 0 auto;
+}
+.image {
+ 	width:100%;	
+}

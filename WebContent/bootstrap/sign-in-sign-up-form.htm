@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="http://snipplicious.com/css/bootstrap-3.2.0.min.css">
+    <link rel="stylesheet" type="text/css" href="http://snipplicious.com/css/font-awesome-4.1.0.min.css">
+    <script src="http://snipplicious.com/js/jquery.js"></script>
+    <script src="http://snipplicious.com/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: url("loginpage.jpg");
+        }
+        .navbar-default {
+            background-color: #63b659;
+            border-color: #46ad44;
+        }
+        .navbar-default .navbar-brand {
+            color: #d8e8d6;
+        }
+        .navbar-default .navbar-brand:hover,
+        .navbar-default .navbar-brand:focus {
+            color: #f2f9f3;
+        }
+        .navbar-default .navbar-text {
+            color: #d8e8d6;
+        }
+        .navbar-default .navbar-nav > li > a {
+            color: #d8e8d6;
+        }
+        .navbar-default .navbar-nav > li > a:hover,
+        .navbar-default .navbar-nav > li > a:focus {
+            color: #f2f9f3;
+        }
+        .navbar-default .navbar-nav > .active > a,
+        .navbar-default .navbar-nav > .active > a:hover,
+        .navbar-default .navbar-nav > .active > a:focus {
+            color: #f2f9f3;
+            background-color: #46ad44;
+        }
+        .navbar-default .navbar-nav > .open > a,
+        .navbar-default .navbar-nav > .open > a:hover,
+        .navbar-default .navbar-nav > .open > a:focus {
+            color: #f2f9f3;
+            background-color: #46ad44;
+        }
+        .navbar-default .navbar-toggle {
+            border-color: #46ad44;
+        }
+        .navbar-default .navbar-toggle:hover,
+        .navbar-default .navbar-toggle:focus {
+            background-color: #46ad44;
+        }
+        .navbar-default .navbar-toggle .icon-bar {
+            background-color: #d8e8d6;
+        }
+        .navbar-default .navbar-collapse,
+        .navbar-default .navbar-form {
+            border-color: #d8e8d6;
+        }
+        .navbar-default .navbar-link {
+            color: #d8e8d6;
+        }
+        .navbar-default .navbar-link:hover {
+            color: #f2f9f3;
+        }
+        @media (max-width: 767px) {
+            .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+                color: #d8e8d6;
+            }
+            .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+            .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+                color: #f2f9f3;
+            }
+            .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+            .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+            .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+                color: #f2f9f3;
+                background-color: #46ad44;
+            }
+        }
+        .sign-in-up .left-inner-addon {
+            position: relative;
+        }
+        .sign-in-up .left-inner-addon input {
+            padding-left: 30px;
+        }
+        .sign-in-up .left-inner-addon i {
+            position: absolute;
+            padding: 10px 12px;
+            pointer-events: none;
+        }
+        .sign-in-up .right-inner-addon {
+            position: relative;
+        }
+        .sign-in-up .right-inner-addon input {
+            padding-right: 30px;
+        }
+        .sign-in-up .right-inner-addon i {
+            position: absolute;
+            right: 0px;
+            padding: 17px 12px;
+            pointer-events: none;
+        }
+        .sign-in-up .click2select {
+            text-align: center;
+            margin-top: 1em;
+        }
+        .sign-in-up .paywith {
+            padding: 12px 12px 0 0;
+            margin: 0;
+            font-weight: bold;
+        }
+        .btn-primary {
+            background: #5a926a;
+        }
+        .btn-primary:hover {
+            background: green;
+        }
+        .btn-danger {
+            background: #666666;
+            border-color: #666666;
+        }
+        .btn-danger:hover {
+            background: #cccccc;
+            border-color: #cccccc;
+        }
+        .forgot {
+            padding: 10px;
+            font-size: 12px;
+            text-decoration: underline;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function currentStudentCheck() {
+            if (document.getElementById('student').checked) {
+                document.getElementById('student1').style.display = 'block';
+                document.getElementById('alumni1').style.display = 'none';
+                document.getElementById('faculty1').style.display = 'none';
+            } else if (document.getElementById('alumni').checked) {
+                document.getElementById('student1').style.display = 'none';
+                document.getElementById('alumni1').style.display = 'block';
+                document.getElementById('faculty1').style.display = 'none';
+            } else if (document.getElementById('faculty').checked) {
+                document.getElementById('student1').style.display = 'none';
+                document.getElementById('alumni1').style.display = 'none';
+                document.getElementById('faculty1').style.display = 'block';
+            } else {
+                document.getElementById('student1').style.display = 'none';
+                document.getElementById('alumni1').style.display = 'none';
+                document.getElementById('faculty1').style.display = 'none';
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-default" role="navigation">
+        <a class="navbar-brand" href="javascript:void(0)"><img src="logo.png"></a>
+			
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+<!--            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form> -->
+            <ul class="nav navbar-nav navbar-right">
+                <li>User Name:<input type="text"></li>
+				<li>Password:<input type="text"></li>
+				<li><button class="btn btn-primary">Sign In</button></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </nav>
+
+    <div class="container sign-in-up">
+        <div class="row">
+		<br />
+            <div class="col-md-4 col-md-offset-4 well">
+                <!-- Nav tabs -->
+                <div class="text-center">
+                        <h1>New User</h1>
+                </div>
+                <p class="click2select">Click to select</p>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="new">
+                        <br>
+                        <fieldset>
+                            <div class="form-group login-group-checkbox" align="center">
+                                <input type="radio" name="register" id="student" onclick="javascript:currentStudentCheck();" value="currentStudent">
+                                <label for="student"> Student </label>
+
+                                <input type="radio" name="register" id="alumni" onclick="javascript:currentStudentCheck();" value="currentStudent">
+                                <label for="alumni"> Alumni </label>
+
+                                <input type="radio" name="register" id="faculty" onclick="javascript:currentStudentCheck();" value="currentStudent">
+                                <label for="faculty"> Faculty </label>
+                            </div>
+                            <div class="form-group">
+                                <div class="right-inner-addon">
+                                    <input class="form-control input-sm" placeholder="Email Address*" type="text">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="right-inner-addon">
+                                    <input class="form-control input-sm" placeholder="Name*" type="text">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="right-inner-addon">
+                                    <input class="form-control input-sm" placeholder="Date of Birth" type="date">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="right-inner-addon">
+                                    <div class="dropdown">
+                                        <td>Department* : </td>
+                                        <td>
+                                            <select name="dropdown">
+                                                <option value="Select">--select--</option>
+                                                <option value="Software">MS in Software Engineering</option>
+                                                <option value="Electrical">MS in Computer/Electrical Engineering</option>
+                                                <option value="Digital">MS in Digital Arts</option>
+                                                <option value="EngMgt">MS in Engineering Management</option>
+                                                <option value="IntSc">MS in Interdisciplinary Science</option>
+                                                <option value="MBA">Masters of Business Administration</option>
+                                            </select>
+                                        </td>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- I think we should rethink this. Trimester I, II, III doesn't make sense. Unless we had something like: Fall 2016... Spring.. Summer.. I don't think this is relevant. Let's keep it simple.
+              <div class="form-group">
+                <div class="right-inner-addon">
+                  <div class="dropdown">
+                    <td>Current Trimester* : </td>
+                      <td><select name="dropdown">
+                        <option  value="Select">--select--</option>
+                        <option  value="na">  Non Applicable  </option>
+                        <option  value="sem1">  Trimester I  </option>
+                        <option  value="sem2">  Trimester II  </option>
+                        <option  value="sem2">  Trimester III  </option>
+                        <option  value="sem2">  Trimester IV  </option>
+                         </select>
+                      </td>
+                  </div>
+                </div>
+              </div>
+            -->
+
+                            <div class="form-group">
+                                <div class="right-inner-addon">
+                                    <input class="form-control input-sm" placeholder="Password*" type="password">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="right-inner-addon">
+                                    <input class="form-control input-sm" placeholder="Confirm Password*" id="" type="password">
+                                </div>
+                            </div>
+                        </fieldset>
+                        <hr>
+                        <div class="tab-content">
+                            <div class="tab-pane fade in active text-center" id="pp">
+                                <button class="btn btn-primary btn-lg btn-block">Sign Up</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="user">
+                        <br>
+                        <fieldset>
+                            <div class="form-group">
+                                <div class="right-inner-addon">
+                                    <i class="fa fa-envelope"></i>
+                                    <input class="form-control input-lg" placeholder="Email Address" type="text">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="right-inner-addon">
+                                    <i class="fa fa-key"></i>
+                                    <input class="form-control input-lg" placeholder="Password" type="password">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="right-inner-addon">
+                                    <input type="checkbox" name="persist" value="1" />
+                                    <span>Keep me signed</span>
+                                    </label>
+                                    </td>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <br>
+                        <div class=" text-center">
+                            <button class="btn btn-primary">LOGIN</button>
+                            <label class="forgot"><a href="/jsp/ResetPassword.jsp">forgot password?</a>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,696 @@
+/*--CSS code for ITUBuzz Social Network--*/
+
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend {
+  background: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  font-family: Roboto;
+}
+
+body.login { 
+  background: url("bg.png"); 
+}
+
+h2 { font-size: 30px; 
+  line-height:38px; 
+  font-weight:normal; 
+}
+
+.loginbox { background: #f2f2f2; 
+  padding: 25px; 
+  border: 2px solid transparent; 
+  border-radius: 130px 30px 50px; 
+  width: 480px; 
+  margin: 4% auto 0 auto; 
+  position: relative; 
+  -webkit-box-shadow: 11px 20px 17px -6px rgba(133,140,132,1);
+  -moz-box-shadow: 11px 20px 17px -6px rgba(133,140,132,1);
+  box-shadow: 11px 20px 17px -6px rgba(133,140,132,1);
+}
+
+.loginboxinner {
+  background: #f2f2f2; 
+  padding:0px; 
+  position: relative; 
+  border: 1px solid #FBFCFD;
+  -moz-box-shadow: inset 0 1px 0 #FBFCFD; -webkit-box-shadow: inset 0 1px 0 #FBFCFD; box-shadow: inset 0 1px 0 #FBFCFD;
+}
+
+.loginheader { height: 30px; 
+}
+
+.loginbox td { color: #737373; 
+  font-size: 11px; 
+  font-family: sans-serif; 
+  padding: 0 auto;
+}
+
+.loginbox input {
+  padding: 2px; 
+  color: #ccc;
+  margin-top: 8px; 
+  font-size: 12px; 
+  border: 1px solid #ccc; 
+  width: 200px;  
+  outline: none;
+}
+
+.title { color:green; 
+  line-height:28px; 
+  font-weight:normal; 
+  text-align:center; 
+  font-size:16px; 
+}
+
+@media screen and (max-width: 430px) {
+
+  button, input, select, textarea { font-size: 11px; }
+}
+
+#itu_bar {
+  background:#5a926a;
+  border-bottom: 1px solid #0053A6;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.52);
+  min-width: 1000px;
+  width: 100%;
+  height: 100px;
+
+}
+#itu_frame {
+  margin-left:auto;
+  margin-right:auto;
+  max-width:1000px;
+  height:70px;
+  display:block;
+}
+
+/*-------LOGO-----------*/
+#logo {
+  float: left;
+  position: relative;
+  width: 180px;
+}
+
+#img_logo {
+  width: 140px;
+  height: 70px;
+  margin-left: -110px;
+  margin-top: 10px;
+
+}
+
+/*-------Login-----------*/
+#header-main-right {
+  float: right;
+  margin-right: -100px;
+  height: 70px;
+  position: relative;
+  top:5px;
+}
+#header-main-right-nav {
+  padding: 4px 6px 4px 4px;
+  position: absolute;
+  right: 0;
+}
+#login_form .inputtext {
+  background-color: #FFFFFF;
+  height:20px;
+  font-family: sans-serif;
+  font-size: 14px;
+  float: right;
+  padding: 0px px auto;
+  width: 180px;
+  border:1px solid transparent;
+}
+#login_form .inputtext:hover {
+  border-color: #A0A0A0 #B9B9B9 #B9B9B9;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) inset;
+}
+
+#login_form table tr td {
+  padding: 0 0 0 5px;
+}
+#login_form table tr td label {
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  padding-left: 1px;
+  text-align: left;
+  vertical-align: middle;
+}
+.loginbutton { border:1px solid #737373; 
+  width:90px; 
+  background: #999999; 
+  font-size:14px; 
+  line-height:20px;
+
+  color:#fff; 
+}
+
+
+/*-------Home Page CSS-----------*/
+
+body.home { 
+	background-color: #e6e6e6;
+	width:100%;
+
+}
+
+ /*--Below code will be used for future--*/
+.profilebutton {
+	position:relative;
+    top: 80%;
+    right: 50px;
+    height: 35px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    background-color:#5a926a;
+    color: #EEEEEE;
+    border: 2px solid #5a926a;
+    height: 80px;
+    cursor: pointer;
+}
+
+.profilebutton #profileimage {
+	right: 400px;
+	height: 40px;
+	width: 40px;
+}
+
+.questionbutton {
+	position:absolute;
+    top: 70%;
+    right: 60px;
+    height: 35px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    background-color:#5a926a;
+    color: #EEEEEE;
+    border: 2px solid #5a926a;
+    height: 80px;
+    
+}
+
+.profilebutton:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+.questionbutton:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.dropdown {
+    position: absolute;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    text-align: center;
+    right: 18px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #E8F5E9}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* ------- Home Page Inner -----------------*/
+
+/*--Not used--*/
+#article {
+	background-color: white;
+	float: left;
+	width: 300px;
+	height: 450px;
+	margin-top: 10px;
+	margin-left: 20px;
+	outline: 1px solid #5a926a;
+	outline-offset: -5px;
+	padding: 7px 7px 7px;
+	box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.4), 0 0 40px rgba(100, 100, 100, 0.1) inset;
+   -webkit-box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.4), 0 0 40px rgba(100, 100, 100, 0.1) inset;
+   -moz-box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.4), 0 0 40px rgba(100, 100, 100, 0.1) inset;   	
+	
+}
+
+/*--Not used--*/
+#aside {
+	background-color: white;
+	float: right;
+	width: 300px;
+	height: 450px;
+	margin-top: 10px;
+	margin-right: 20px;
+	outline: 1px solid #5a926a;
+	outline-offset: -5px;
+	padding: 7px 7px 7px;
+	box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.4), 0 0 40px rgba(100, 100, 100, 0.1) inset;
+   -webkit-box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.4), 0 0 40px rgba(100, 100, 100, 0.1) inset;
+   -moz-box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.4), 0 0 40px rgba(100, 100, 100, 0.1) inset;
+}
+
+.tagname {
+	font-family: sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    margin-left: 30px;
+    margin-right: 10px;
+	background-color: transparent;
+	text-align: left;
+	color: #333333;
+}
+.tagname_right {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  margin-right: 40px;
+	background-color: transparent;
+	text-align: right;
+	color: black;	
+}
+
+.section{
+   margin: 0px 0px 20px;
+   background-color: #5a926a;
+   margin-left: 6%;
+   height: 150px;
+   border-right: none;
+   border-left: none;
+   width: 85%;
+   padding: 17px;
+   box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.4), 0 0 40px rgba(100, 100, 100, 0.1) inset;
+   -webkit-box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.4), 0 0 40px rgba(100, 100, 100, 0.1) inset;
+   -moz-box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.4), 0 0 40px rgba(100, 100, 100, 0.1) inset;   	
+}
+
+#post_text { autofocus;
+	background-color: white;
+	height: 100px;
+	width: 90%; 
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 12px;
+  resize: none;
+  margin-top: -50px;
+  margin-left: 90px;
+}
+
+#postbutton {
+  border : solid 0px #ffffff;
+	border-radius : 4px;
+	moz-border-radius : 4px;
+	font-size : 14px;
+	color : #474747;
+	padding : 0px 10px;
+	background-color : white;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  float:right;
+  margin: -10px 40px 10px 20px;
+}
+
+#postbutton:hover {
+    background-color: darkgray;
+    color: white;
+}
+
+/*--Not used--*/
+#recentactivity {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    color: #5a926a;
+    text-align: center;
+    margin-top: 200px;
+	
+}
+/*--Not used--*/
+.postby {
+  margin-top: 10px;
+  margin-left: 390px;
+  width: 130px;
+  background-color: #76C199;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: left;
+  padding: 3px 3px 3px 3px;
+  border-radius: 5px 0px;
+  box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.4), 0 0 40px rgba(100, 100, 100, 0.1) inset;
+  -webkit-box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.4), 0 0 40px rgba(100, 100, 100, 0.1) inset;
+  -moz-box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.4), 0 0 40px rgba(100, 100, 100, 0.1) inset;   
+  }
+ 
+.post {
+	margin-top: 10px;
+	margin-left: 10px;
+	width: 100%;
+    text-align: left;
+    padding: 5px;
+    box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.4), 0 0 40px rgba(100, 100, 100, 0.1) inset;
+ 	-webkit-box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.4), 0 0 40px rgba(100, 100, 100, 0.1) inset;
+    -moz-box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.4), 0 0 40px rgba(100, 100, 100, 0.1) inset;   
+ 	
+}
+
+#postdisplaytext {
+	margin-right: 7px;
+	margin-top: 5px;
+	background-color: #fff;
+ 	width: 80%;
+    padding: 20px;
+    margin-left: 75px;
+    text-align: left;
+    resize: none;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    	
+}
+
+#like {
+  color: #000066;
+	height: 30px;
+	width: 20px;
+  float: center;
+  margin-left: 70%;
+}
+
+#reply {
+border : solid 0px #ffffff;
+border-radius : 4px;
+moz-border-radius : 4px;
+margin-top: 5px;
+font-size : 14px;
+color : #474747;
+background-color : white;
+font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+
+
+#reply_text {
+
+  width: 70%;
+  float: center;
+  margin-left: 90px;
+  height: 25px;
+  border-radius:0px;
+  resize: none;
+  margin-bottom: 30px;
+
+}
+
+
+#reply_button {
+border : solid 0px #ffffff;
+border-radius : 4px;
+moz-border-radius : 4px;
+font-size : 14px;
+color : #474747;
+padding : 2px 5px;
+background-color : white;
+font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+}
+#reply_button:hover {
+  background: darkgray;
+  color:white;
+}
+
+.picture {
+  width: 10px;
+  height: 12px;
+}
+
+#maintable
+{
+	width:100%;
+
+}
+
+.upper_table {
+  text-align: right;
+  margin-top: 30px;
+
+}
+
+#leftsidecolumn
+{
+	width:20%;
+	vertical-align:top;
+	line-height:130%;
+}
+
+#centercolumn
+{
+	width:50%;
+	/* background color modification */
+	background-color:transparent;
+}
+
+#rightsidecolumn {
+	width:20%;
+	vertical-align:top;
+	line-height:130%;
+	color: blue;
+}
+
+#centercolumn h3
+{
+	color:darkgray;
+	text-align:center;
+}
+
+#postcolumn {
+	float: center;
+	color: blue;
+
+}
+
+.list-group-item {
+
+}
+
+#activitiestable
+{
+	width:85%;
+	background-color: blue;
+	margin-left: 40px;
+}
+#activitiestable td
+{
+	width:100%;
+
+}
+
+textarea:focus, input:focus {
+    color: gray;
+}
+
+input, select, textarea{
+    color: #737373;
+    resize: none;
+    border-radius: 20px 10px 30px 10px;
+    border-color: transparent;
+}
+
+body.textarea {
+    border: 1px #ddd solid;
+    width: 400px;
+    height: 120px;
+    font: 9pt Consolas;
+    resize: none;
+}
+
+/* Logout Button*/
+
+.exit-btn { 
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    display: inline-block;
+    margin: 1px 40px;
+    letter-spacing: 1px;
+    position: relative; 
+}
+
+.exit-btn-2:before {
+    position: absolute;
+    left: 0;
+    top: -54px;
+    font-size: 172%;
+    width: 50px;
+}
+
+.exit-btn-2:before {
+    content: "\e017";
+    font-family: 'Glyphicons Halflings';
+}
+
+/*Search*/
+
+.box {
+  margin: 5px auto;
+  width: 600px;
+  height: 20px;
+  margin-right: 40px;
+}
+
+.container-1{ 
+  margin: 10px auto;
+  width: 300px;
+  height: 0px auto;
+}
+
+.container-1 input#search{
+  width: 450px;
+  height: 30px;
+  background: white;
+  border: none;
+  font-size: 14px;
+  font-family: comic-sans;
+  color: #333333;
+  text-align: center;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.container-1 .icon{
+  position: absolute;
+  top: 10%;
+  margin-left: 15px;
+  margin-top: 15px;
+  z-index: 1;
+  color: #4f5b66;
+}
+
+
+/* Links & Image*/
+a img { border: none; }
+img { vertical-align: top; }
+
+a {
+    text-decoration: none;
+}
+a:link, a:visited {
+    color: #333333;
+}
+a:hover {
+    color: green;
+}
+
+/*Html Tags*/
+body { line-height: 1; }
+ul, ol { list-style: none; }
+abbr[title] { border-bottom: 1px dotted; }
+abbr:hover { cursor: help; }
+b, strong { font-weight: bold; }
+i, em, dfn { font-style: italic; }
+hr { display: block; height: 1px; border: 0; margin: 1em 0; padding: 0; }
+ins { text-decoration: none; }
+mark { font-style: italic; font-weight: bold; }
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+blockquote, q { quotes: none; }
+blockquote:before, 
+blockquote:after,
+q:before, 
+q:after { content: ''; content: none; }
+small { font-size: 85%; }
+big { font-size: 135%; }
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+/*Button, input, textarea*/
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+button, input { line-height: normal; *overflow: visible; }
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
+textarea { overflow: auto; vertical-align: top; resize: vertical; }
+
+/*Tables*/
+table { width: 100%; border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+
+/* Chat Code */ 
+
+.chat-box {
+  font:normal normal 11px/1.4 Tahoma,Verdana,Sans-Serif;
+  color:black;
+  width:210px; /* Chatbox width */
+  border:1px solid ;
+  border-bottom:none;
+  background-color:white;
+  position:fixed;
+  text-align: center;
+  right:10px;
+  bottom:0;
+}
+
+.chat-box > input[type="checkbox"] {
+  display:block;
+  margin:0 0;
+  padding:0 0;
+  position:absolute;
+  top:0;
+  right:0;
+  left:0;
+  width:100%;
+  height:26px;
+  z-index:4;
+  cursor:pointer;
+  opacity:0;
+  filter:alpha(opacity=0);
+}
+
+.chat-box > label {
+  display:block;
+  height:24px;
+  line-height:24px;
+  background-color:#5a926a;
+  color:white;
+  font-weight:bold;
+  padding:0 1em 1px;
+}
+
+.chat-box > label:before {content:attr(data-collapsed)}
+
+.chat-box .chat-box-content {
+  padding:10px;
+  display:none;
+}
+
+/* hover state */
+.chat-box > input[type="checkbox"]:hover + label {background-color:#5a926a;}
+
+/* checked state */
+.chat-box > input[type="checkbox"]:checked + label {background-color:}
+.chat-box > input[type="checkbox"]:checked + label:before {content:attr(data-expanded)}
+.chat-box > input[type="checkbox"]:checked ~ .chat-box-content {display:block}
+
+
+

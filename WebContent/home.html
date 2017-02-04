@@ -1,0 +1,160 @@
+<!-- 
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@ page import="java.util.ArrayList,java.util.Iterator,com.itubuzz.valueobjects.PostVO" %> -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" href="home.css" type="text/css" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="icon" href="marca.png" type="image/png">
+
+<title>ITUBuzz</title>
+<!--<%
+	if(null!=request.getAttribute("errorMessage"))
+    {
+        out.println(request.getAttribute("errorMessage"));
+    }
+%> -->
+<script type="text/javascript">
+function displayReply() {
+	var selectedobj=document.getElementById('reply_text');
+	if(selectedobj.className=='hide'){  //check if classname is hide 
+	    selectedobj.style.display = "block";
+	    selectedobj.className ='show';
+	  }else{
+	    selectedobj.style.display = "none";
+	    selectedobj.className ='hide';
+	 }
+
+	var selectedobj=document.getElementById('reply_button');
+	if(selectedobj.className=='hide'){  //check if classname is hide 
+	    selectedobj.style.display = "block";
+	    selectedobj.className ='show';
+	  }else{
+	    selectedobj.style.display = "none";
+	    selectedobj.className ='hide';
+	 }
+}
+</script>  
+
+</head>
+
+<body class="home">
+  <div id="itu_bar">
+    <div id="itu_frame">
+      <div id="logo"><img src="logo.png" id="img_logo" alt="logo"/></div> 
+        <div id="header-main-right">
+          <div id="header-main-right-nav"> 
+
+
+  <div class="box">
+    <div class="container-1">
+      <span class="icon"><i class="fa fa-search"></i></span>
+      <input type="search" id="search" placeholder="Search..." />
+    </div>
+  </div>
+
+  <table class="upper_table">
+    <tr>
+  		<td ><a href="FetchProfileServlet" id="profile"><!-- <%=session.getAttribute("name")%></a> | --> 
+  			<td><a class="exit-btn exit-btn-2" href="LogOut.jsp" id="logout"></a></td>
+  	</tr>
+  </table>
+
+	      </div>
+      </div>
+	 </div>
+  </div>
+  <br>
+  <br>
+
+  <table id="maintable">
+    <tr>
+      <td id="leftsidecolumn">
+          <ul class="tagname">
+            <a class="list-group-item" href="#"><i class="fa fa-newspaper-o fa-fw"></i>&nbsp; What's trending</a>
+            <a class="list-group-item" href="#"><i class="fa fa-group fa-fw"></i>&nbsp; Create Group</a>
+            <a class="list-group-item" href="#"><i class="fa fa-feed fa-fw"></i>&nbsp; News Feed</a>
+            <a onlink="" class="list-group-item"><i class="fa fa-link fa-fw"></i>&nbsp; Related Links</a>
+            <a class="list-group-item" href="GetforumServlet" id="knowledge"><i class="fa fa-file-text-o fa-fw"></i>&nbsp; Knowledge</a>
+            <a class="list-group-item" href="#"><i class="fa fa-question-circle fa-fw"></i>&nbsp; Ask Questions</a>
+
+  	       </ul>
+        </td>
+
+
+      <td id="centercolumn"> 
+        <form id="post_form" action="PostDataServlet" method="post"> 
+          <div class="section">  
+                <!-- We should include the person's picture in here -->
+            <img src="livia.jpg" class="picure" width="50px" height="50px" alt="image"> 
+		        <textarea name="post_text" id="post_text" style="display:block;width:420px;height:100px;"> Share your thoughts </textarea><br>
+		          <input type="submit" id="postbutton" value="Post">
+		          <!--<input type="hidden" name="user_name_logged" id="user_name_logged" value="<%=session.getAttribute("name")%>"/> 
+              <input type="hidden" name="user_id" id="user_id" value="<%=session.getAttribute("user_id")%>"/>  -->
+          </div> 
+        </form>	
+    <!--<h3>Recent Activity</h3> -->
+      <table class="section" class="post">
+        <tr>
+         <!-- <%
+                        	@SuppressWarnings("unchecked")
+                        	ArrayList<PostVO> dbooks=(ArrayList<PostVO>)session.getAttribute("post_updated_value");
+                        		    Iterator<PostVO> list=dbooks.iterator();
+                                while(list.hasNext())
+                                {
+                                    PostVO b=(PostVO)list.next();
+                        %> -->
+        </tr>
+    <div class="section"> 
+		  <tr>
+        <td ><i>Posted by :<!-- <%=b.log_user_name%></i>  --> </td>
+      </tr>
+        
+      <tr> 
+        <td><textarea id="postdisplaytext" rows="10" name="postdisplaytext" readonly="readonly" style="display:block;width:450px;height:150px;"><%=b.post_value%> </textarea>
+          <input type="hidden" name="post_id" value="<%=b.post_id%>">
+          <input type="hidden" name="log_user_id" value="<%=b.log_user_id %>"></td>
+    	</tr>
+      <tr>
+        <td><label id="like" onclick="displayCounter()"><u><i class="fa fa-thumbs-up"></i></u></label>
+          <button id="reply" onclick="displayReply()">Reply</button>    
+        </td>
+      </tr>
+    	<tr>
+        <td> 
+          <textarea id="reply_text" name="reply_text">Comment...</textarea>
+            <input type="submit" id="reply_button" name="reply_button" value="Submit">
+        </td>
+      </tr>
+    </div> 
+     	<tr>
+          <!-- <%
+            
+        }
+    %> -->
+      </tr>
+  </table>
+	 </td>
+	
+    <td id="rightsidecolumn">
+    <div class="tagname_right" >
+
+      <div class="chat-box">
+    <input type="checkbox" />
+    <label data-expanded="Close Chatbox" data-collapsed="See Who is Online"></label>
+    <div class="chat-box-content">Testing Chat!!!
+    </td>
+    
+   </tr>
+ </div>
+    </div> 
+</table>
+    
+<br>
+</body>
+</html>
